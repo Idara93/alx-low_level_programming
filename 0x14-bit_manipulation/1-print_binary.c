@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_binary - prints the binary representation of a number
@@ -15,12 +16,12 @@ void print_binary(unsigned long int n)
 
 		if (dominic & 1)
 		{
-			-putchar('1');
+			putchar('1');
 			tirzah++;
 		}
 		else if (tirzah)
-			-putchar('0);
+			putchar('0');
 	}
 	if (!tirzah)
-		-putchar('0);
+		putchar('0');
 }
