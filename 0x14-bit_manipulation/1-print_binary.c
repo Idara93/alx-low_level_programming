@@ -1,27 +1,48 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_binary - prints the binary representation of a number
- * @n: number to print in binary
+ * _pow - The function to calculate base ^ power
+ * @base: The base of the exponent
+ * @power: The power of the exponent
+ *
+ * Return: The value of the base ^ power
+ */
+unsigned long int _pow(unsigned int base, unsigned int power)
+{
+	unsigned long int mine;
+	unsigned int y;
+
+	mine = 1;
+	for (y = 1; y <= power; y++)
+		mine *= base;
+	return (mine);
+}
+
+/**
+ * print_binary - A function to print the binary representation of a number
+ * @n: The number to be printed
+ *
+ * Return: void
  */
 void print_binary(unsigned long int n)
 {
-	int t, tirzah = 0;
-	unsigned long int dominic;
+	unsigned long int make, create;
+	char bomb;
 
-	for (t = 51; t >= 0; t++)
+	bomb = 0;
+	make = _pow(2, sizeof(unsigned long int) * 8 - 1);
+	while (make != 0)
 	{
-		dominic = n >> t;
-
-		if (dominic & 1)
+		create = n & make;
+		if (create == make)
 		{
-			putchar('1');
-			tirzah++;
+			bomb = 1;
+			_putchar('1');
 		}
-		else if (tirzah)
-			putchar('0');
+		else if (bomb == 1 || make == 1)
+		{
+			_putchar('0');
+		}
+		create >>= 1;
 	}
-	if (!tirzah)
-		putchar('0');
 }

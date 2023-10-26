@@ -10,7 +10,8 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	int t, tirzah = 0;
+	int t, tirzah = 0:wq
+		;
 	unsigned long int current;
 	unsigned long int exclusive = n ^ m;
 
